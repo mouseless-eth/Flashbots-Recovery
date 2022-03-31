@@ -15,7 +15,7 @@ The solution is to send transactions to seed + claim + withdraw all in the **sam
 
 ## Proof of transaction 
 The transactions can be seen bundled together in block [14488296](https://etherscan.io/txs?block=14488296&p=10)
-![Transactions In Block 14488296](./Transactions_In_Block_14488296.png)
+![Transactions In Block 14488296](./Block_14488296.png)
 
 | Contract/Account Name     | Address                                    |
 | Gelato ICO claim contract | 0x5898D2aE0745c8d09762Bac50fd9F34A2a95A563 |
