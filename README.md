@@ -24,6 +24,7 @@ The transactions can be seen bundled together in block [14488296](https://ethers
  Claiming Gelato tokens to `compromised_wallet`                       | [0xf9676c...479c50](https://etherscan.io/tx/0xf76ce7c4c0ac8a68cae7417e230db2826e501a1abc731c620d8b2990479c50) |
 | Withdrawing Gelato tokens from `compromised_wallet` to `ledger_wallet` | [0x8d4da8...7cb7f7](https://etherscan.io/tx/0xf9676ce7c4c0ac8a68cae7417e230db2826e501a1abc731c620d8b2990479c50) |
 
+### Contracts/Addresses in play
 | Contract/Account Name     | Address                                    |
 | -----------               | -----------                                |
 | Gelato ICO claim contract | 0x5898D2aE0745c8d09762Bac50fd9F34A2a95A563 |
