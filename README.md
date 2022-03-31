@@ -1,14 +1,29 @@
 # Gelato Recovery
 
-Creating a flashbots bundle to recover Gelato ICO tokens from a **compromised wallet**.
+Creating a flashbots bundle to recover unclaimed Gelato ICO tokens from a **compromised wallet**.
 
 ### The Problem
-**compromised wallet** has had it's private key leaked with bots watching for incoming transactions to steal tokens as soon as they are deposited. To claim the ICO airdrop the compromised wallet needs to be seeded with ETH to pay for the gas fees to claim. 
+the **compromised wallet** has had it's private key leaked and now there are bots watching for incoming transactions to steal tokens as soon as they are deposited. To claim the ICO airdrop the compromised wallet needs to be seeded with ETH to pay for the gas fees (without the bots stealing the ETH as soon as it is deposited). 
 
-The solution is to send transactions to seed + claim + withdraw all in the **same block** so that the bots won't be able to steal ETH as soon as it is deposited. We can do this using the [ethers-provider-flashbots-bundle](https://www.npmjs.com/package/@flashbots/ethers-provider-bundle) package.
+The solution is to send transactions to seed + claim + withdraw all in the **same block** so that the malicious bots won't be able to steal the deposited ETH. We can do this using the [ethers-provider-flashbots-bundle](https://www.npmjs.com/package/@flashbots/ethers-provider-bundle) package.
 
 ## Transactions 
-1. Send funds from `new_wallet` to `compromised_wallet` to cover gas for claiming + transfering
+1. Send funds from `funding_wallet` to `compromised_wallet` to cover gas for claiming + transfering
 2. Claim Gelato ICO tokens from `compromised_wallet` 
-3. Transfer claimed Gelato tokens from `compromised_wallet` to `new_wallet`
-4. Transfer all unused ETH from `compromised_wallet` to `new_wallet`
+3. Transfer claimed Gelato tokens from `compromised_wallet` to `ledger_wallet`
+4. Transfer all unused ETH from `compromised_wallet` to `funding_wallet`
+
+## Proof of transaction 
+The transactions can be seen bundled together in block [14488296](https://etherscan.io/txs?block=14488296&p=10)
+![Transactions In Block 14488296](./Transactions_In_Block_14488296.png)
+
+| Contract/Account Name     | Address                                    |
+| Gelato ICO claim contract | 0x5898D2aE0745c8d09762Bac50fd9F34A2a95A563 |
+| Gelato token contract     | 0x15b7c0c907e4C6b9AdaAaabC300C08991D6CEA05 |
+| Compromised Wallet        | 0xbC79c7139C87df965F0F4C24747F326D1864C5aF |
+| Funding Wallet            | 0xc1F8713A20734059246b00d0e524F24fe9Ac7A8B |
+
+### TXids of all transactions in the same block
+- [Funding `compomised_wallet` using `funding_wallet`](https://etherscan.io/tx/0xdd4608a77bf59afae165d6d9450ab03fd256d4f47a3f152928893810c5e668d5)
+- [Claiming Gelato tokens from `compromised_wallet`](https://etherscan.io/tx/0xf9676ce7c4c0ac8a68cae7417e230db2826e501a1abc731c620d8b2990479c50)
+- [Withdrawing Gelato tokens from `compromised_wallet` to `ledger_wallet`](https://etherscan.io/tx/0xf9676ce7c4c0ac8a68cae7417e230db2826e501a1abc731c620d8b2990479c50)
