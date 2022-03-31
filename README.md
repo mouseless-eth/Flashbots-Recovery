@@ -24,7 +24,9 @@ The transactions can be seen bundled together in block [14488296](https://ethers
 | Compromised Wallet        | 0xbC79c7139C87df965F0F4C24747F326D1864C5aF |
 | Funding Wallet            | 0xc1F8713A20734059246b00d0e524F24fe9Ac7A8B |
 
-### TXids of all transactions in the same block
-- [Funding `compomised_wallet` using `funding_wallet`](https://etherscan.io/tx/0xdd4608a77bf59afae165d6d9450ab03fd256d4f47a3f152928893810c5e668d5)
-- [Claiming Gelato tokens from `compromised_wallet`](https://etherscan.io/tx/0xf9676ce7c4c0ac8a68cae7417e230db2826e501a1abc731c620d8b2990479c50)
-- [Withdrawing Gelato tokens from `compromised_wallet` to `ledger_wallet`](https://etherscan.io/tx/0xf9676ce7c4c0ac8a68cae7417e230db2826e501a1abc731c620d8b2990479c50)
+### Transaction Hashes
+| Transaction                                                            | Hash                                                                                                                                                             |
+| -----------                                                            | -----------                                                                                                                                                      |
+| Funding `compomised_wallet` using `funding_wallet`                     | [0xdd4608a77bf59afae165d6d9450ab03fd256d4f47a3f152928893810c5e668d5](https://etherscan.io/tx/0xdd4608a77bf59afae165d6d9450ab03fd256d4f47a3f152928893810c5e668d5) |
+| Claiming Gelato tokens from `compromised_wallet`                       | [0xf9676ce7c4c0ac8a68cae7417e230db2826e501a1abc731c620d8b2990479c50](https://etherscan.io/tx/0xf9676ce7c4c0ac8a68cae7417e230db2826e501a1abc731c620d8b2990479c50) |
+| Withdrawing Gelato tokens from `compromised_wallet` to `ledger_wallet` | [0x8d4da8dc3277ebd2098dd6d079805a7b545ce72c38ffd9cfcdcef202d87cb7f7](https://etherscan.io/tx/0xf9676ce7c4c0ac8a68cae7417e230db2826e501a1abc731c620d8b2990479c50) |
