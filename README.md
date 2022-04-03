@@ -14,7 +14,7 @@ The solution is to send transactions to seed + claim + withdraw all in the **sam
 3. Transfer claimed Gelato tokens from `compromised_wallet` to `ledger_wallet`
 4. Transfer all unused ETH from `compromised_wallet` to `funding_wallet`
 
-## Proof of transaction 
+## Proof Of Transactions 
 The transactions can be seen bundled together in block [14488296](https://etherscan.io/txs?block=14488296&p=10)
 ![Transactions In Block 14488296](./Block_14488296.png)
 
