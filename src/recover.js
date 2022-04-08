@@ -83,9 +83,9 @@ async function recover() {
         },
       ]
 
-		const flashbotsTransactionResponse = await flashbotsProvider.sendBundle(
-    		bundle,
-    		blockNumber + 1,
+      const flashbotsTransactionResponse = await flashbotsProvider.sendBundle(
+      bundle,
+      blockNumber + 1,
     );
     
     // in event of error produce error msg
