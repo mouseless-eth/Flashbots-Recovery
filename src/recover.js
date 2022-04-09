@@ -38,12 +38,11 @@ async function recover() {
           signer: new_wallet 
         },
 
-        // transaction to claim Gelato tokens
+        // transaction to claim ICO tokens
         {
           transaction: {
             chainId: CHAIN_ID,
             to: addresses.claimContract,
-            // contract call to claim the Gelato tokens from compromised wallet
             data: '0x704fc04e000000000000000000000000bc79c7139c87df965f0f4c24747f326d1864c5af',
             type: 2,
             gasLimit: 91170,
@@ -58,7 +57,6 @@ async function recover() {
           transaction: {
             chainId: CHAIN_ID,
             to: addresses.gelatoToken,
-            // contract call to transfer Gelato tokens to Ledger wallet (from compromised wallet)
             data: '0xa9059cbb000000000000000000000000acf6418cefd7254f5e34b2b2e9a8f081e0e150d1000000000000000000000000000000000000000000000845e16a00dd60f00000',
             type: 2,
             gasLimit: 78000,
@@ -84,9 +82,9 @@ async function recover() {
       ]
 
       const flashbotsTransactionResponse = await flashbotsProvider.sendBundle(
-      bundle,
-      blockNumber + 1,
-    );
+        bundle,
+        blockNumber + 1,
+      );
     
     // in event of error produce error msg
     if ('error' in flashbotsTransactionResponse) {
