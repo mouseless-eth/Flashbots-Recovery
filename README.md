@@ -1,6 +1,6 @@
 # Gelato Recovery
 
-Creating a flashbots bundle to recover $44K worth of unclaimed Gelato ICO tokens from a **compromised wallet**. This is the source code to this [Twitter thread](https://twitter.com/impranavm_)
+Creating a flashbots bundle to recover $44K worth of unclaimed Gelato ICO tokens from a **compromised wallet**. This is the source code to this [Twitter thread](https://twitter.com/impranavm_).
 
 ### The Problem
 - The **compromised wallet** has had it's private key leaked, a malicoius individual set up bots to for incoming transactions to steal tokens as soon as they are deposited. 
