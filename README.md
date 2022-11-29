@@ -3,7 +3,7 @@
 I created a flashbots bundle to recover $44K worth of unclaimed Gelato ICO tokens from a **compromised wallet**. This is the source code to this [Twitter thread](https://twitter.com/impranavm_/status/1512758634954240000).
 
 ### The Problem
-- The **compromised wallet** has had it's private key leaked, a malicoius individual set up bots to for incoming transactions to steal tokens as soon as they are deposited. 
+- The **compromised wallet** has had it's private key leaked, a malicoius individual set up a bot to monitor for incoming transactions and to steal tokens as soon as they are deposited to the compromised address. 
 - To claim the ICO airdrop the compromised wallet needs to be seeded with enough ETH to pay for the gas fees (without the bots stealing the ETH as soon as it is deposited). 
 
 The solution is to send transactions to seed + claim + withdraw all in the **same block**. We can do this by sending these bundled transaction to flashbot minters using the [ethers-provider-flashbots-bundle](https://www.npmjs.com/package/@flashbots/ethers-provider-bundle) package.
